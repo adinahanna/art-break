@@ -33,13 +33,13 @@ export default function Gallery() {
 
     return (
         <section className='art-container'>
-           {/* {artArray.map((artObject, index) => {
+           {artArray.map((artObject, index) => {
                return (
                 <div className='art-img'>
                     <img src={artObject.records[index].baseimageurl} alt='art image' />
                 </div>
                )
-           })} */}
+           })}
         </section>
     ) 
 }

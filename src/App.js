@@ -26,7 +26,7 @@ function App() {
             />
             <Route
               exact
-              path="studio"
+              path="/studio"
               render={() => <Studio />}
             />
           </Switch>
