@@ -19,15 +19,27 @@ export default function Gallery() {
         console.error(err);
       }
     }
-    // console.log(artData.records[0].baseimageurl);
+    
     useEffect(() => {
       getArtData();
     }, []);
-   
+
+    if (!artData) {
+        return <p>loading...</p>
+    }
+
+    const artArray = artData.records;
+    console.log(artArray)
 
     return (
         <section className='art-container'>
-           
+           {/* {artArray.map((artObject, index) => {
+               return (
+                <div className='art-img'>
+                    <img src={artObject.records[index].baseimageurl} alt='art image' />
+                </div>
+               )
+           })} */}
         </section>
-    )
+    ) 
 }

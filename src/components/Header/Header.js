@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
-        <header className='header'>
+        <header>
             <nav>
-                <Link to="/gallery">Gallery</Link>
-                <h1>Art Break</h1>
-                <Link to="/studio">Studio</Link>
+                <Link to="/gallery" className="nav-link">Gallery</Link>
+                <Link to="/" className="nav-title">ART BREAK</Link>
+                <Link to="/studio" className="nav-link">Studio</Link>
             </nav>
         </header>
     )
