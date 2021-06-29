@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function Gallery() {
-    const [artData, setArtData] = useState(null);
+    const [artData, setArtData] = useState([]);
 
     let randomNum;
     const getRandomNum = () => {
@@ -14,34 +14,26 @@ export default function Gallery() {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        setArtData(data);
-      } catch(err) {
+        console.log(data);
+        setArtData(data.records);
+        console.log(artData);
+    } catch(err) {
         console.error(err);
-      }
     }
-    
-    useEffect(() => {
-      getArtData();
-    }, []);
-
-    const handleClick = (event) => {
-        event.preventDefault();
-        const artArray = artData.records;
-        return (
-            <div className='art-container'>
-                {artArray.map((artObject, index) => {
-                    return (
-                        <div className='art-img' key={index}>
-                        <img src={artObject.baseimageurl} alt='art image' />
-                        </div>
-                        )
-                })}
-            </div>
-        )}
+}
 
     return (
-        <main>
-            <button onClick={handleClick}>Click to generate random artwork!</button>            
-        </main>
+        <section>
+            <button onClick={getArtData}>Click to generate random artwork</button>
+            <div className="art-container">
+                {artData.map((artObject, index) => {
+                    return (
+                        <div className='art-img' key={index}>
+                            <img src={artObject.baseimageurl} alt='art image' />
+                        </div>
+                        )
+                    })}
+                </div>            
+        </section>
     ) 
 }
