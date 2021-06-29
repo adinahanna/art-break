@@ -7,7 +7,6 @@ import Home from './components/Home/Home';
 import Studio from './components/Gallery/Studio/Studio';
 
 function App() {
-  
 
   return (
     <>

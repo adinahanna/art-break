@@ -12,6 +12,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 100px;
+  width: 100%;
 }
 
 .nav-link {
@@ -52,4 +53,40 @@ nav {
   font-size: 22px;
   font-weight: bold;
   color: rgb(31, 25, 92)
+}
+.art-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(248, 248, 248);
+  width: 300px;
+  height: 2870px;
+  margin: 0 auto;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+}
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  margin-top: 15px;
+  border-radius: 7px;
+  border: solid rgb(31, 25, 92) 2px;
+}
+button {
+  margin-top: 20px;
+  height: 35px;
+  width: 250px;
+  font-size: 18px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 500;
+  background-color: rgb(177, 169, 184);
+  color:rgb(31, 25, 92);
+  border-radius: 7px;
+  border: none;
+  margin-bottom: 10px;
+  margin-left: 62px;
 }

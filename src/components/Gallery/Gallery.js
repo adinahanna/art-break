@@ -24,22 +24,24 @@ export default function Gallery() {
       getArtData();
     }, []);
 
-    if (!artData) {
-        return <p>loading...</p>
-    }
-
-    const artArray = artData.records;
-    console.log(artArray)
+    const handleClick = (event) => {
+        event.preventDefault();
+        const artArray = artData.records;
+        return (
+            <div className='art-container'>
+                {artArray.map((artObject, index) => {
+                    return (
+                        <div className='art-img' key={index}>
+                        <img src={artObject.baseimageurl} alt='art image' />
+                        </div>
+                        )
+                })}
+            </div>
+        )}
 
     return (
-        <section className='art-container'>
-           {artArray.map((artObject, index) => {
-               return (
-                <div className='art-img'>
-                    <img src={artObject.records[index].baseimageurl} alt='art image' />
-                </div>
-               )
-           })}
-        </section>
+        <main>
+            <button onClick={handleClick}>Click to generate random artwork!</button>            
+        </main>
     ) 
 }
