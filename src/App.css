@@ -54,6 +54,7 @@ nav {
   font-weight: bold;
   color: rgb(31, 25, 92)
 }
+
 .art-container {
   display: flex;
   flex-direction: column;
@@ -77,7 +78,6 @@ img {
   border: solid rgb(31, 25, 92) 2px;
 }
 button {
-  margin-top: 20px;
   height: 35px;
   width: 250px;
   font-size: 18px;
@@ -87,6 +87,12 @@ button {
   color:rgb(31, 25, 92);
   border-radius: 7px;
   border: none;
-  margin-bottom: 10px;
-  margin-left: 62px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

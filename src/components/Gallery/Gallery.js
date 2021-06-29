@@ -5,7 +5,7 @@ export default function Gallery() {
 
     let randomNum;
     const getRandomNum = () => {
-      randomNum = Math.floor(Math.random() * 500);
+      randomNum = Math.floor(Math.random() * 1000);
     }
     getRandomNum();
    
@@ -14,16 +14,14 @@ export default function Gallery() {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data);
-        setArtData(data.records);
-        console.log(artData);
+        setArtData(data.records); 
     } catch(err) {
         console.error(err);
     }
 }
 
     return (
-        <section>
+        <div className="gallery-container">
             <button onClick={getArtData}>Click to generate random artwork</button>
             <div className="art-container">
                 {artData.map((artObject, index) => {
@@ -34,6 +32,6 @@ export default function Gallery() {
                         )
                     })}
                 </div>            
-        </section>
+        </div>
     ) 
 }
