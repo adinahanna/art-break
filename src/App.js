@@ -1,4 +1,5 @@
 import './App.css';
+import './largescreen.css';
 import { Route, Switch } from 'react-router-dom';
 import Gallery from './components/Gallery/Gallery';
 import Header from './components/Header/Header';
