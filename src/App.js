@@ -1,12 +1,13 @@
 import './App.css';
-import { Route, Link, Switch } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Gallery from './components/Gallery/Gallery';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Studio from './components/Gallery/Studio/Studio';
+import { useState } from 'react';
 
 function App() {
+  const [studioImg, setStudioImg] = useState('');
 
   return (
     <>
@@ -21,12 +22,11 @@ function App() {
             <Route
               exact
               path="/gallery"
-              render={() => <Gallery />}
+              render={() => <Gallery setStudioImg={setStudioImg} />}
             />
             <Route
-              exact
               path="/studio"
-              render={() => <Studio />}
+              render={() => <Studio studioImg={studioImg} />}
             />
           </Switch>
         </main>

@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-export default function Gallery() {
+export default function Gallery({ setStudioImg }) {
     const [artData, setArtData] = useState([]);
 
     let randomNum;
@@ -14,11 +15,11 @@ export default function Gallery() {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        setArtData(data.records); 
+        setArtData(data.records);
     } catch(err) {
         console.error(err);
+        }
     }
-}
 
     return (
         <div className="gallery-container">
@@ -26,12 +27,15 @@ export default function Gallery() {
             <div className="art-container">
                 {artData.map((artObject, index) => {
                     return (
-                        <div className='art-img' key={index}>
-                            <img src={artObject.baseimageurl} alt='art image' />
+                        <div className='art-img' key={index} >
+                            <Link 
+                                to={'/studio/'} onClick={() => setStudioImg(artObject.baseimageurl)} >
+                                    <img src={artObject.baseimageurl} alt={artObject.alttext} />
+                            </Link>
                         </div>
-                        )
-                    })}
-                </div>            
+                            )
+                    })}       
+            </div>            
         </div>
     ) 
 }
