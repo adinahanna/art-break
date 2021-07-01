@@ -37,7 +37,7 @@ nav {
 .main-home-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 750px;
 }
@@ -61,6 +61,8 @@ nav {
   text-align: center;
   font-family: 'Barlow Condensed', sans-serif;
   color:rgb(31, 25, 92);
+  margin-top: 15px;
+  margin-bottom: 0px;
 }
 .welcome-par {
   text-align: justify;
@@ -70,6 +72,8 @@ nav {
   font-size: 22px;
   font-weight: bold;
   color: rgb(31, 25, 92);
+  margin-bottom: 0px;
+  margin-top: 15px;
 }
 
 .art-container {
@@ -106,7 +110,7 @@ button {
   margin-bottom: 15px;
 }
 button:hover {
-  background-color: rgb(181, 47, 70);
+  background-color: rgb(152, 8, 81);
   color:rgb(248, 248, 248);
   cursor: pointer;
 }
@@ -134,4 +138,6 @@ footer {
 canvas {
   width: 254px;
   height: 254px;
+  border: solid rgb(31, 25, 92) 2px;
+  border-radius: 7px;
 }

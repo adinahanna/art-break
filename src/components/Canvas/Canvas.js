@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 
 const Canvas = () => {
-    // const [mousePosition, setMousePosition] = useState({ x: null, y: null });
+    const [mouseDown, setMouseDown] = useState(false);
+    
+    let x = 0;
+    let y = 0;
 
-    // const updateMousePosition = (event) => {
-    //     console.log(event.clientX, event.clientY);
-    //     setMousePosition({
-    //         x: event.clientX,
-    //         y: event.clientY,
-    //     })
-    // }
+    const stopDrawing = () => {setMouseDown(false)};
+    const startDrawing = (event) => {
+        setMouseDown(true);
+        [x, y] = [event.offsetX, event.offsetY];
+    } 
 
     useEffect(() => {
-        // updateMousePosition();
     }, []);
 
     return (

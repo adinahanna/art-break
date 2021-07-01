@@ -8,7 +8,7 @@ export default function Studio({ studioImg })  {
                 <h1 className='welcome'>Welcome to the Studio!</h1>
                 <div className='studio-img-container'>
                     <div>
-                        {/* <Canvas /> */}
+                        <Canvas />
                     </div>
                     <div>
                          <img src={studioImg} alt='null' className='studio-img' />
