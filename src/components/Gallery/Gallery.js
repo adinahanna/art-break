@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 export default function Gallery({ setStudioImg }) {
     const [artData, setArtData] = useState([]);
 
+    const apiKey = 'a12dc667-7bf0-4aef-9c2b-e09b701d5804';
+
     let randomNum;
     const getRandomNum = () => {
       randomNum = Math.floor(Math.random() * 1000);
@@ -11,7 +13,7 @@ export default function Gallery({ setStudioImg }) {
     getRandomNum();
    
     const getArtData = async () => {
-      const url = `https://api.harvardartmuseums.org/image?size=10&page=${randomNum}&apikey=${process.env.REACT_APP_API_KEY}`;
+      const url = `https://api.harvardartmuseums.org/image?size=10&page=${randomNum}&apikey=${apiKey}`;
       try {
         const response = await fetch(url);
         const data = await response.json();
