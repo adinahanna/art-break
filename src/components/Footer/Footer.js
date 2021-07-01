@@ -1,7 +1,6 @@
 export default function Footer() {
     return (
-        <footer>CREATED WITH THE HARVARD ART MUSEUMS API</footer>
+        <footer>CREATED WITH THE <a className='footer-link' href='https://harvardartmuseums.org/collections/api' title='HARVARD ART MUSEUMS API'>HARVARD ART MUSEUMS API</a></footer>
     )
 }
 
-// 'https://harvardartmuseums.org/collections/api'
