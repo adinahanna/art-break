@@ -5,8 +5,9 @@ import { Route, Switch } from 'react-router-dom';
 import Gallery from './components/Gallery/Gallery';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
-import Studio from './components/Gallery/Studio/Studio';
+import Studio from './components/Studio/Studio';
 import { useState } from 'react';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [studioImg, setStudioImg] = useState('');
@@ -32,6 +33,7 @@ function App() {
             />
           </Switch>
         </main>
+      <Footer />
     </>
   );
 }
