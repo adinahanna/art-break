@@ -1,0 +1,101 @@
+.grid-container-one {
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 3fr 2fr;
+    grid-template-rows: 4fr 2fr 3fr 1fr;
+    grid-gap: 2%;
+    color:rgb(248, 248, 248);
+    border: solid rgb(18, 4, 72) 2px;
+    border-radius: 5px;
+  }
+  .one {
+      background-color: rgb(222, 0, 10);
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 2;
+  }
+  .two {
+      background-color: rgb(226, 231, 223);
+      grid-column: 3 / span 2;
+  }
+  .three {
+      background-color: rgb(226, 231, 223);
+      grid-column: 1 / span 2;
+  }
+  .four {
+      background-color: rgb(226, 231, 223);
+      grid-column: 3 / span 2;
+  }
+  .five {
+      background-color: rgb(247, 199, 12);
+      grid-row: 3 / span 2;
+  }
+  .six {
+      background-color: rgb(226, 231, 223);
+      grid-row: 3 / span 2;
+  }
+  .seven {
+      background-color: rgb(18, 4, 72);
+      grid-row: 3 / span 1;
+  }
+  .eight {
+      background-color: rgb(226, 231, 223);
+      grid-row: 3 / span 2;
+  }
+  .nine {
+      background-color: rgb(226, 231, 223);
+  }
+  
+  .grid-container-two {
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 3fr 2fr;
+    grid-template-rows: 1fr 3fr 3fr 1fr 1fr;
+    grid-gap: 3%;
+    color:rgb(248, 248, 248);
+    border: solid rgb(18, 4, 72) 2px;
+    border-radius: 5px;
+  }
+  .one-t {
+      background-color: rgb(225, 67, 19);
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 2;
+  }
+  .two-t {
+      background-color: rgb(226, 238, 216);
+      grid-row: 1 / span 2;
+  }
+  .three-t {
+      background-color: rgb(254, 210, 15);
+      grid-row: 1 / span 2;
+  }
+  .four-t {
+     background-color: rgb(223, 45, 20);
+     grid-column: 1 / span 2;
+  }
+  .five-t {
+    background-color: rgb(244, 234, 195);
+    grid-row: 3 / span 2;
+  }
+  .six-t {
+      background-color: rgb(234, 218, 163);
+      grid-row: 3 / span 2;
+  }
+  .seven-t {
+      background-color: rgb(226, 238, 216);
+  }
+  .eight-t {
+      background-color: rgb(14, 24, 16);
+  }
+  .nine-t {
+      background-color: rgb(244, 234, 195);
+      grid-column: 1 / span 2;
+  }
+  .ten-t {
+      background-color: rgb(7, 48, 83);
+      grid-row: 4 / span 2;
+      grid-column: 3 / span 2;
+  }
