@@ -1,3 +1,48 @@
+# Art Break
+
+## Project Description
+
+Art Break is exactly what it sounds like - a way to use art to take a break from the world. Art Break is a fully functional React app that receives live data from the Harvard Art Museums API, displays the data randomly, and allows you to draw on a digital sketchpad. Visit Art Break: https://art-break.netlify.app/
+
+## Technologies Used
+1. React
+2. CSS FLexbox
+3. CSS Grid
+4. JSX
+5. Yarn
+6. React-Canvas-Draw
+7. Balsamiq
+
+## Planning Process
+Step one included building out my app idea, identifying MVP and stretch goals, writing user stories, and planning a timeline.
+
+THe next steps were identifying which API I wanted to use and building out my component architecture as pictured below. Planning the component structure included identifying which components would need to share data, where state variables needed to be initialized, and which React hooks I would be implementing.
+
+![component hierarchy] ( ./images/component-hierarchy.png )
+
+I then used Balsamiq to wireframe the different components of my app at different breakpoints.
+
+Links to wireframes:
+* Homepage-large screen: https://share.balsamiq.com/c/pxCHm1J7ek3ecYTqSc7wfN.png
+* Homepage-mobile: https://share.balsamiq.com/c/pxCHm1J7ek3ecYTqSc7wfN.png
+* Gallery-large screen: https://share.balsamiq.com/c/4u3ZmYRp8bE3GpV8AEaLGJ.png
+* Gallery-mobile: https://share.balsamiq.com/c/fUrLaYtWYgNzQDXDAXFPTR.png
+* Studio-large screen: https://share.balsamiq.com/c/6U9xDPSRY1cojLkeZT1XrV.png
+* Studio-mobile: https://share.balsamiq.com/c/fikpMf7yL7yJ46TpGUp4UX.png
+
+And finally, it was time to get to coding!
+
+## Challenges
+The biggest challenge in building this app was the Canvas component. I had originally planned to build my own sketchpad using the HTML Canvas component with React. However, due to time constraints, I chose to incorporate React-Canvas-Draw instead, with plans to build out that functionality myself at a later date.
+Additionally, some of the features I had initially planned (like a search form) were not supported by the data included in the API, so I had to pivot away from that idea and focus on other features.
+
+## Features to Add in the Future
+* build out the sketchpad myself and add a color picker and brush size
+* consider switching to a different API that would better support a search functionality for better user interaction
+* add a tablet breakpoint to the styles
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
