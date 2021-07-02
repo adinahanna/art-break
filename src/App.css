@@ -115,11 +115,20 @@ button:hover {
   align-items: center;
   flex-direction: column;
 }
-.studio-img-container {
+.studio-container {
+  background-color: rgb(248, 248, 248);
   display: flex;
-  justify-content: space-evenly;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
   height: 600px;
+  border-radius: 10px;
+}
+.studio-canvas {
+  border:solid rgb(31, 25, 92) 2px;
+  border-radius: 7px;
+  margin-bottom: 15px;
 }
 footer {
   color: rgb(177, 169, 184);
@@ -137,10 +146,4 @@ footer {
 .footer-link:hover {
   cursor: pointer;
   color: rgb(152, 8, 81);
-}
-canvas {
-  width: 254px;
-  height: 254px;
-  border: solid rgb(31, 25, 92) 2px;
-  border-radius: 7px;
 }

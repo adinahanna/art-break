@@ -1,29 +1,27 @@
+import reactDom from 'react-dom';
+import CanvasDraw from 'react-canvas-draw';
 import { useState, useEffect } from 'react';
 
-const Canvas = () => {
-    const [mouseDown, setMouseDown] = useState(false);
-    
-    let x = 0;
-    let y = 0;
-
-    const stopDrawing = () => {
-        setMouseDown(false);
-        console.log('i stopped drawing')
-    };
-    const startDrawing = (event) => {
-        setMouseDown(true);
-        [x, y] = [event.offsetX, event.offsetY];
-        console.log('i am drawing');
-    };
+export default function Canvas() {
+    const [options, setOptions] = useState({ 
+        color: "#ffc600",
+        height: '200px',
+        width: '200px',
+        brushRadius: 10,
+        lazyRadius: 12});
 
     useEffect(() => {
-        window.addEventListener('mousedown', startDrawing);
-        window.addEventListener('mouseup', stopDrawing);
-    }, []);
-
+        window.setInterval(() => {
+            setOptions({
+              color: "#" + Math.floor(Math.random() * 16777215).toString(16)
+            });
+          }, 2000);
+    }) 
     return (
-        <canvas className='paint-canvas'></canvas>
-    )
+        <div className='studio-canvas'>
+          <CanvasDraw brushColor={options.color} onChange={() => console.log("onChange")} canvasWidth={250} canvasHeight={250} hideGrid={true} />
+        </div>
+      );
 }
+  
 
-export default Canvas;
