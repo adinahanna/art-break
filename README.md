@@ -12,6 +12,7 @@ Art Break is exactly what it sounds like - a way to use art to take a break from
 5. Yarn
 6. React-Canvas-Draw
 7. Balsamiq
+8. Favicon
 
 ## Planning Process
 Step one included building out my app idea, identifying MVP and stretch goals, writing user stories, and planning a timeline.
@@ -38,9 +39,11 @@ Additionally, some of the features I had initially planned (like a search form) 
 
 ## Features to Add in the Future
 * build out the sketchpad myself and add a color picker and brush size
+* add button to clear sketchpad to start a new drawing
 * consider switching to a different API that would better support a search functionality for better user interaction
 * add a tablet breakpoint to the styles
-
+* display only the sketchpad if you navigate directly to the studio
+* clear the studio image when you navigate away from the studio
 
 
 # Getting Started with Create React App
